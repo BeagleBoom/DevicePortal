@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>BeagleBoom Device Portal</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="/img/BeagleBoomLogo_1.png" width="48" height="48" class="d-inline-block align-middle" alt="">
+            <span style="margin-left: 8px;">BeagleBoom Device Portal</span>
+        </a>
+    </nav>
+    <div class="container">
+        <div style="margin-top:24px;" class="jumbotron">
+
+
+            <h1 class="display-4">
+                <img src="/img/BeagleBoomLogo_1.png" class="d-inline-block align-middle logo-heading" alt=""> Welcome
+            </h1>
+            <h2 class="display-5 subheading">to your BeagleBoom Device Portal!</h2>
+            <hr class="my-4">
+            <p class="text-center">To use the search feature on your BeagleBoom, you need to link your Device with your FreeSound Account.</p>
+            <br/>
+            <p class="text-center">
+                <a class="btn btn-primary btn-lg align-middle" style="color:white;" onclick="openOAuth();" role="button">Link with FreeSound</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <script>
+        var arr = window.location.href.split("/");
+        var oAuthAuthorizeURL = arr[0] + "//" + arr[2] + "/authorize";
+
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        function openOAuth() {
+            var bbid = getParameterByName("bbid");
+            if (bbid) {
+                window.location.href = oAuthAuthorizeURL + "?bbid=" + bbid;
+            }
+        }
+
+    </script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+{
+  "name": "beagleboomportal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lasse Kathke",
+  "license": "ISC",
+  "dependencies": {
+    "hat": "0.0.3",
+    "oauth": "^0.9.15",
+    "pem": "^1.12.5",
+    "qr-image": "^3.2.0",
+    "simple-oauth2": "^1.6.0"
+  }
+}
