@@ -4,6 +4,7 @@ The BeagleBoom Device Portal is a webserver/webservice that handels the oAuth au
 
 # Overview
 ## Authentification Process
+![Authentication Process Scheme](docs/auth_process.png "Authentication Process Scheme")
 ## Software Architecture
 ## Network Architecture
 
