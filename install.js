@@ -4,7 +4,9 @@ let defaultSettings = {
     "webBaseURL": "https://beagleboom.kathke-research.de",
     "hostname": "beagleboom.kathke-research.de",
     "webPort": 9000,
-    "apiPort": 8080
+    "apiPort": 8080,
+    "freesound_app_id": "",
+    "freesound_app_secret" : ""
 };
 
 //Generate a new Server Certificate and add it into the settings.json file
@@ -16,7 +18,6 @@ pem.createCertificate({ days: 365, selfSigned: true, organization: "FH Kiel", co
     try {
         defaultSettings = require("./settings.json");
     } catch(err) {
-        throw err;
         console.log("No Settings File has been found, creating a new one!");
     }
     
