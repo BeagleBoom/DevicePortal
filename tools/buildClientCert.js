@@ -20,17 +20,17 @@ function createClientCert(id) {
         serviceCertificate: settings.cert,
         serial: id
     }, function (err, keys) {
-        let tokenData = { server_cert: settings.cert };
-        tokenData.client_key = keys.clientKey;
-        tokenData.client_cert = keys.certificate;
+        let tokenData = { ca: settings.cert };
+        tokenData.key = keys.clientKey;
+        tokenData.cert = keys.certificate;
 
-        console.log("Client Key:\n", tokenData.client_key);
-        console.log("Client Cert:\n", tokenData.client_cert);
+        console.log("Client Key:\n", tokenData.key);
+        console.log("Client Cert:\n", tokenData.cert);
 
         if (!fs.existsSync(certDirectory)) {
             fs.mkdirSync(certDirectory);
         }
 
-        fs.writeFile(path.join(certDirectory, id + ".json"), JSON.stringify(tokenData, null, 2), () => {});
+        fs.writeFile(path.join(certDirectory, id + ".json"), JSON.stringify({freesound: {baseUrl: "https://" + settings.hostname + ":" + settings.apiPort , certificate: tokenData }}, null, 2), () => {});
     });
 }
