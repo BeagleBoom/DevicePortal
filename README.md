@@ -14,7 +14,7 @@ The following scheme shows an overview of the authentification process:
         * (Optional) a valid domain-certificate for the **User Device Portal**
     * An unused tcp port for the **BeagleBoom Device authentification** (a reverse proxy for the device authentification is not supported)
     * An unused tcp port or a reverse proxy (like nginx) for the **User Device Portal**
-        * The Device Portal uses HTTP, if you you want to use HTTPS you need an reverse proxy
+        * The Device Portal uses HTTP, if you you want to use HTTPS you need a reverse proxy
 
 # Dependencies
 BeagleBoom Device Portal is using the following dependencies:
