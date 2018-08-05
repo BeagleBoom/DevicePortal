@@ -6,7 +6,6 @@ The BeagleBoom Device Portal is a webserver/webservice that handels the oAuth au
 ## Software Architecture
 ## Network Architecture
 
-# BeagleBoom Authentification Process
 # Requirements
 * vServer/Root Server with
     * Node.js (v.10+)
@@ -105,6 +104,14 @@ to the **menu's** settings.json file:
   "midi_device": "MIDIPLUS61U"
 }
 ```
+# Start the Device Portal
+For starting the Device Portal, you just have to run the node.js application with:
+```bash
+    node .
+```
 
-# TLS Handshake
+Make sure your configured ports are available. 
+To check, if the Device Portal is running, just open http://localhost:9000/ (9000 is your configured webPort)
 
+# BeagleBoom Authentification Process
+## TLS Handshake
