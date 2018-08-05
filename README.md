@@ -77,7 +77,7 @@ To store the generated certificate on your BeagleBoom and enter the Device API U
 you have to edit the setting.json file in the application directory of the **Menu** project.
 
 Copy your certificate data (from /clientCerts/xxx.json):
-```
+```json
 {
   "freesound": {
     "baseUrl": "https://beagleboom.kathke-research.de:8080",
@@ -90,7 +90,7 @@ Copy your certificate data (from /clientCerts/xxx.json):
 ```
 to the **menu's** settings.json file:
 
-```
+```json
 {
   "freesound": {
     "baseUrl": "https://beagleboom.kathke-research.de:8080",
