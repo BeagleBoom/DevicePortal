@@ -105,7 +105,7 @@ to the **menu's** settings.json file:
 }
 ```
 # Start the Device Portal
-For starting the Device Portal, you just have to run the node.js application with:
+To start the Device Portal, you just have to run the node.js application with:
 ```bash
     node .
 ```
