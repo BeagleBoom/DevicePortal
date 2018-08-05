@@ -1,4 +1,5 @@
-# DevicePortal
+# ![alt text](static/img/BeagleBoomLogo_1.png "BeagleBoom Device Portal") BeagleBoom Device Portal
+
 The BeagleBoom Device Portal is a webserver/webservice that handels the oAuth authentification process (for mobile devices) by using a TLS certificate authentification and oAuth access token redirection.
 
 # Overview
