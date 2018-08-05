@@ -3,10 +3,9 @@
 The BeagleBoom Device Portal is a webserver/webservice that handels the oAuth authentification process (for mobile devices) by using a TLS certificate authentification and oAuth access token redirection.
 
 # Overview
-## Authentification Process
+## Authentification Process Scheme
+The following scheme shows an overview of the authentification process:
 ![Authentication Process Scheme](docs/auth_process.png "Authentication Process Scheme")
-## Software Architecture
-## Network Architecture
 
 # Requirements
 * vServer/Root Server with
@@ -115,5 +114,4 @@ To start the Device Portal, you just have to run the node.js application with:
 Make sure your configured ports are available. 
 To check, if the Device Portal is running, just open http://localhost:9000/ (9000 is your configured webPort)
 
-# BeagleBoom Authentification Process
-## TLS Handshake
+# BeagleBoom Device Portal API Endpoints
