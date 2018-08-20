@@ -115,3 +115,11 @@ Make sure your configured ports are available.
 To check, if the Device Portal is running, just open http://localhost:9000/ (9000 is your configured webPort)
 
 # BeagleBoom Device Portal API Endpoints
+| Endpoint    	| Description                           	| Example Output                                                                         	| Example Description                                          	|
+|-------------	|---------------------------------------	|----------------------------------------------------------------------------------------	|--------------------------------------------------------------	|
+| /poll       	| Gets the FreeSound Access Token       	| {    code: 200,    access_token: "XYZ...",    expires_at: "2018-08-20T07:43:16.952Z" } 	| First Access Token from oAuth registration                   	|
+| /poll       	|                                       	| {    code: 201,    access_token: "XYZ..." }                                            	| Renewed Access Token (old one has been expired)              	|
+| /poll       	|                                       	| {    code: 204,    message: "BeagleBoom is not registered" }                           	| No oAuth registration on this BeagleBoom                     	|
+| /poll       	|                                       	| {    code: 407,    message: "You need to reauthorize with FreeSound" }                 	| Can not get a new Access Token from FreeSound                	|
+| /getauthurl 	| Gets the oAuth User Regristration URL 	| {    code: 200,    image: "SVG_IMAGE_DATA",    url: "http://...RegistrationURL" }      	| Ok, gets generated QR Code as SVG Image and Registration URL 	|
+| /getauthurl 	|                                       	| HTTP-Code: 400 Content: BeagleBoom not recognized                                      	| BeagleBoom Cetificate has no valid serialNumber              	|
