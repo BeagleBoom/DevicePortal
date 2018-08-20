@@ -7,6 +7,14 @@ The BeagleBoom Device Portal is a webserver/webservice that handles the oAuth au
 The following scheme shows an overview of the authentification process:
 ![Authentication Process Scheme](docs/auth_process.png "Authentication Process Scheme")
 
+##TLS Authentification
+The BBDP (BeagleBoom Device Portal) uses for it's BeagleBoom API communication a secure tls connection with client authentification.
+When the BeagleBoom connects to the device Portal, the portal sends it's certificate to the device. The BeagleBoom verifies it (it's deposited into it's config file)
+and sends it's own certificate (which is signed by the Device Protal certificate) to the device Portal. The BeagleBoom's certificate also contains a serial number.
+This serial number is used to assign it with your oAuth registration data.
+
+You can read more about nodejs client authentification on https://engineering.circle.com/https-authorized-certs-with-node-js-315e548354a2
+
 # Requirements
 * vServer/Root Server with
     * Node.js (v.10+)
@@ -105,6 +113,7 @@ to the **menu's** settings.json file:
   "midi_device": "MIDIPLUS61U"
 }
 ```
+
 # Start the Device Portal
 To start the Device Portal, you just have to run the node.js application with:
 ```bash
