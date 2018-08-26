@@ -133,3 +133,9 @@ To check, if the Device Portal is running, just open http://localhost:9000/ (900
 | /poll       	|                                       	| {    code: 407,    message: "You need to reauthorize with FreeSound" }                 	| Can not get a new Access Token from FreeSound                	|
 | /getauthurl 	| Gets the oAuth User Regristration URL 	| {    code: 200,    image: "SVG_IMAGE_DATA",    url: "http://...RegistrationURL" }      	| Ok, gets generated QR Code as SVG Image and Registration URL 	|
 | /getauthurl 	|                                       	| HTTP-Code: 400 Content: BeagleBoom not recognized                                      	| BeagleBoom Cetificate has no valid serialNumber              	|
+
+# License
+The content and source code of this project itself is licensed under the [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by/4.0/).
+
+# About this repository
+This repository is part of the [BeagleBoom](https://github.com/beagleboom)-Sampler project developed by the academic working group "[Creative Technologies AG](http://www.creative-technologies.de/)" (ctag) at the [University of Applied Sciences Kiel](https://www.fh-kiel.de/).
